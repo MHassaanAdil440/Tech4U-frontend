@@ -1,13 +1,13 @@
-import logo from "./logo.svg";
 import "./App.css";
-import Nabar from "./components/MyNabar";
 import { BrowserRouter } from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import MyNavbar from "./components/MyNabar";
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <Nabar />
+        <MyNavbar />
         <h1>Tech4U Dashboard</h1>
       </BrowserRouter>
     </div>

@@ -1,41 +1,26 @@
 import React from "react";
 import { Link } from "react-router-dom";
-// import { Container, Nav, Navbar as Bootstrapnavbar} from "react-bootstrap";
+import { Container, Nav, Navbar } from "react-bootstrap"; // Remove the 'Navbar' import
 
-const Navbar = () => {
+const MyNavbar = () => {
   return (
-    // <Navbar bg="dark" data-bs-theme="dark">
-    //     <Container>
-    //         <Navbar.Brand >Tech4U</Navbar.Brand>
-    //         <Nav>
-    //             <Nav.Link>Home</Nav.Link>
-    //             <Nav.Link>Add Product</Nav.Link>
-    //             <Nav.Link>Update Product</Nav.Link>
-    //             <Nav.Link>Profile</Nav.Link>
-    //         </Nav>
-    //     </Container>
-    // </Navbar>
-
-    <div>
-      <ul>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/add">Add Product</Link>
-        </li>
-        <li>
-          <Link to="/update">Update Product</Link>
-        </li>
-        <li>
-          <Link to="/logout">Log out</Link>
-        </li>
-        <li>
-          <Link to="/profile">Profile</Link>
-        </li>
-      </ul>
-    </div>
+    <Navbar bg="dark" data-bs-theme="dark">
+      <Container>
+        <Navbar.Brand as={Link} to="/home">Tech4U</Navbar.Brand>
+        <Nav className="me-auto">
+          <Nav.Link as={Link} to="/home">
+            Home
+          </Nav.Link>
+          <Nav.Link as={Link} to="add">
+            Add Products
+          </Nav.Link>
+          <Nav.Link as={Link} to="update">
+            Update Products
+          </Nav.Link>
+        </Nav>
+      </Container>
+    </Navbar>
   );
 };
 
-export default Navbar;
+export default MyNavbar;
