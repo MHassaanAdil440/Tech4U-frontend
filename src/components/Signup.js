@@ -1,7 +1,11 @@
+import React from 'react';
+import { Link } from 'react-router-dom'; // Import Link component
+import { FaUser, FaHeart, FaShoppingCart } from 'react-icons/fa';
+
 const Signup = () => {
   return (
     <div>
-      <div className="container-fluid bg-dark">
+      <div className="container-fluid">
         <div className="row">
           <div className="col mx-auto h1 text-center mb-3 text-primary fw-bold">
             Create New Customer Account
@@ -10,7 +14,7 @@ const Signup = () => {
         <div className="row">
           <div className="col-lg-6 col-md-7 col-sm-9 col-12 mx-auto bg-light">
             <form>
-              <div className="mb-3">Personal Information</div>
+              <h2 className="mb-3 text-primary">Personal Information</h2> {/* Added Bootstrap class for styling */}
               <div className="mb-3">
                 <label className="form-label">
                   First Name:
@@ -34,17 +38,17 @@ const Signup = () => {
                 </label>
               </div>
               <div className="form-check">
-                <input type="checkbox" className="form-check-input"/>
-                  <label className="form-label">Sign up for Newsletter</label>
+                <input type="checkbox" className="form-check-input" />
+                <label className="form-label">Sign up for Newsletter</label>
               </div>
               <div className="form-check">
-                <input type="checkbox" className="form-check-input"/>
-                  <label className="form-label">
-                    Allow remote shopping assistance
-                  </label>
+                <input type="checkbox" className="form-check-input" />
+                <label className="form-label">
+                  Allow remote shopping assistance
+                </label>
               </div>
 
-              <div className="mb-3">Sign-in Information</div>
+              <h2 className="mb-3 mt-4 text-primary">Sign-in Information</h2> {/* Added Bootstrap class for styling */}
               <div className="mb-3">
                 <label className="form-label">
                   Email:
@@ -83,8 +87,15 @@ const Signup = () => {
                 <label className="form-label">Show Password</label>
               </div>
               <button type="submit" className="btn btn-primary">
-                Submit
+                Create an Account
               </button>
+
+              <div className="mt-3 text-center">
+                <p>
+                  Already have an account?{' '}
+                  <Link to="/signin">Sign In</Link>
+                </p>
+              </div>
             </form>
           </div>
         </div>

@@ -19,6 +19,7 @@ const Login = () => {
                   id="loginEmail"
                   className="form-control"
                   placeholder="Enter Email"
+                  autoComplete="off"
                   required
                 />
               </label>
@@ -31,6 +32,7 @@ const Login = () => {
                   id="loginPassword"
                   className="form-control"
                   placeholder="Enter Password"
+                  autoComplete="off"
                   required
                 />
               </label>
