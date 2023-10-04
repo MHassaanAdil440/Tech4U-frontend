@@ -6,20 +6,22 @@ import MyFooter from "./test_components/MyFooter";
 import Signup from "./components/Signup";
 import Login from "./components/Login";
 import Navbar from "./components/Navbar";
-
+import Drawer from "./components/Drawer";
+import CategorySection from "./components/CategorySection"
+import Slider from "./components/Slider";
 function App() {
   return (
     <div className="">
       <BrowserRouter>
         
       <Navbar/>
-      <Signup/>
+      {/* <Signup/> */}
+      {/* <Drawer/> */}
+      <CategorySection/>
+      <Slider/>
+      {/* <Login /> */}
       <MyFooter />
       </BrowserRouter>
-      {/* <Login /> */}
-      {/* <BrowserRouter>
-        <Navbar />
-      </BrowserRouter> */}
     </div>
   );
 }

@@ -2,7 +2,7 @@ import React from 'react';
 
 const Login = () => {
   return (
-    <div className="container-fluid bg-dark">
+    <div className="container-fluid bg-light">
       <div className="row">
         <div className="col mx-auto h1 text-center mb-3 text-primary fw-bold">
           Welcome Back! Login to Your Account
