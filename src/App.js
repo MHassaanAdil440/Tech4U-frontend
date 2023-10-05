@@ -7,25 +7,45 @@ import Signup from "./components/Signup";
 import Login from "./components/Login";
 import Navbar from "./components/Navbar";
 import Drawer from "./components/Drawer";
-import CategorySection from "./components/CategorySection"
+import CategorySection from "./components/CategorySection";
 import Slider from "./components/Slider";
 import Cards from "./components/Cards";
 function App() {
-  const img1="https://cdn.pixabay.com/photo/2016/03/27/19/43/samsung-1283938_1280.jpg"
-  const img2="https://cdn.pixabay.com/photo/2018/01/08/02/34/technology-3068617_1280.jpg"
-  const img3="https://cdn.pixabay.com/photo/2016/06/28/05/10/laptop-1483974_1280.jpg"
+  const img1 =
+    "https://cdn.pixabay.com/photo/2016/03/27/19/43/samsung-1283938_1280.jpg";
+  const img2 =
+    "https://cdn.pixabay.com/photo/2018/01/08/02/34/technology-3068617_1280.jpg";
+  const img3 =
+    "https://cdn.pixabay.com/photo/2016/06/28/05/10/laptop-1483974_1280.jpg";
   return (
     <div className="">
       <BrowserRouter>
+        <Navbar />
         
-      <Navbar/>
-      <Cards title1="Andriod" img1={img1} title2="Iphone X" img2={img2} title3="Laptop" img3={img3}  />
-      {/* <Signup/> */}
-      {/* <Drawer/> */}
-      {/* <CategorySection/>
-      <Slider/> */}
-      {/* <Login /> */}
-      {/* <MyFooter /> */}
+
+        {/* <Signup/> */}
+        {/* <Drawer /> */}
+        <Slider />
+        
+        <CategorySection />
+        <div className="container text-center">
+          <div className="row justify-content-center">
+            <div className="col-lg-3 col-md-6">
+              <Cards title1="Android" img1={img1} />
+            </div>
+            <div className="col-lg-3 col-md-6">
+              <Cards title1="Laptops" img1={img3} />
+            </div>
+            <div className="col-lg-3 col-md-6">
+              <Cards title1="iphone" img1={img2} />
+            </div>
+            <div className="col-lg-3 col-md-6">
+              <Cards title1="Android" img1={img1} />
+            </div>
+          </div>
+        </div>
+        {/* <Login /> */}
+        <MyFooter />
       </BrowserRouter>
     </div>
   );
